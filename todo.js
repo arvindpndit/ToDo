@@ -1,11 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const app = express();
 const PORT = 3000;
 
 //mimicing a database by an array
 let todoList = [];
-
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -29,6 +30,7 @@ app.post("/todos", (req, res) => {
 
   return res.status(201).json({
     success: true,
+    data: todoList,
   });
 });
 
