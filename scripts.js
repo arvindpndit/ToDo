@@ -1,7 +1,18 @@
 getTodo();
 
-function deleteTodo(data) {
-  console.log("deleted successfully");
+function deleteTodo(id) {
+  fetch(`http://localhost:3000/todos/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then(() => {
+      location.reload();
+    })
+    .catch((error) => {
+      console.error("Error deleting todo:", error);
+    });
 }
 
 function parsedResponse(data) {
@@ -19,7 +30,7 @@ function parsedResponse(data) {
   grandChildElement2.innerHTML = data.content || "";
 
   let grandChildElement3 = document.createElement("button");
-  grandChildElement3.setAttribute("onclick", "deleteTodo()");
+  grandChildElement3.setAttribute("onclick", `deleteTodo(${data.id})`);
   grandChildElement3.innerHTML = "Delete";
 
   childElement.appendChild(grandChildElement1);
@@ -54,8 +65,10 @@ function addTodo() {
 
 function parsedResponsefromBE(data) {
   let allTodo = data.data;
+
   let parentElement = document.getElementById("show-todo");
   for (let i = 0; i < allTodo.length; i++) {
+    let todoId = allTodo[i].id;
     let childElement = document.createElement("div");
 
     let grandChildElement1 = document.createElement("span");
@@ -68,7 +81,7 @@ function parsedResponsefromBE(data) {
     grandChildElement2.innerHTML = allTodo[i].content;
 
     let grandChildElement3 = document.createElement("button");
-    grandChildElement3.setAttribute("onclick", "deleteTodo()");
+    grandChildElement3.setAttribute("onclick", `deleteTodo(${allTodo[i].id})`);
     grandChildElement3.innerHTML = "Delete";
 
     childElement.appendChild(grandChildElement1);

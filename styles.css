@@ -6,6 +6,8 @@ body {
 
 h1 {
   text-align: center;
+  color: #333;
+  margin-top: 30px;
 }
 
 #create-todo {
@@ -17,21 +19,29 @@ h1 {
 
 #create-todo span {
   font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 #title,
 #description {
-  width: 200px;
-  padding: 5px;
+  width: 250px;
+  padding: 10px;
   margin-bottom: 10px;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  color: #333;
 }
 
 button {
-  padding: 5px 10px;
+  padding: 10px 20px;
   background-color: #4caf50;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -39,23 +49,15 @@ button:hover {
 }
 
 #show-todo {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-#show-todo {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
+  margin-top: 30px;
 }
 
 #show-todo > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
-  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
 }
 
 #show-todo > div:last-child {
@@ -65,24 +67,28 @@ button:hover {
 #grandchild {
   font-weight: bold;
   margin-right: 10px;
+  color: #333;
 }
 
 #grandchild2 {
   margin-right: 10px;
   overflow: hidden;
-  max-width: 200px; /* Adjust the value as needed */
+  max-width: 200px;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: #777;
 }
 
-button {
+button.delete-button {
   padding: 5px 10px;
   background-color: #ff0000;
   color: white;
   border: none;
+  border-radius: 3px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
+button.delete-button:hover {
   background-color: #e60000;
 }
