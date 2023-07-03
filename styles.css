@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+#create-todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#create-todo span {
+  font-weight: bold;
+}
+
+#title,
+#description {
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#show-todo {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#show-todo {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#show-todo > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+#show-todo > div:last-child {
+  border-bottom: none;
+}
+
+#grandchild {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#grandchild2 {
+  margin-right: 10px;
+  overflow: hidden;
+  max-width: 200px; /* Adjust the value as needed */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e60000;
+}
