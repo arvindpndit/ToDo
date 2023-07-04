@@ -44,8 +44,6 @@ This application interacts with a backend API to store and retrieve todos. The A
 - `POST /todos` - Add a new todo
 - `DELETE /todos/{id}` - Delete a specific todo
 
-Make sure to replace the API endpoint URLs in the JavaScript code with the actual endpoints provided by your backend server.
-
 ## Credits
 
 This Todo Application is developed by Me. It is created as a learning project given by 100xDevs.
